@@ -74,5 +74,9 @@ public class UserController {
 
 		return ResponseEntity.ok("Hello java");
 	}
+	@GetMapping("/getData")
+	public ResponseEntity<String> get() {
 
+		return ResponseEntity.ok("Hello java");
+	}
 }

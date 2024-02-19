@@ -78,11 +78,11 @@ public class UserController {
 //	}
 
 
-	@GetMapping("/newChanges")
-	public ResponseEntity<String> getNewString() {
-
-		return ResponseEntity.ok("This is the new file changes");
-	}
+//	@GetMapping("/newChanges")
+//	public ResponseEntity<String> getNewString() {
+//
+//		return ResponseEntity.ok("This is the new file changes");
+//	}
 	@GetMapping("/newChanges1")
 	public ResponseEntity<String> getNewString1() {
 

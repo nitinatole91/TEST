@@ -76,12 +76,10 @@ public class UserController {
 
 		return ResponseEntity.ok("Hello java");
 	}
+	@GetMapping("/getData")
+	public ResponseEntity<String> get() {
 
-
-	@GetMapping("/newChanges")
-	public ResponseEntity<String> getNewString() {
-
-		return ResponseEntity.ok("This is the new file changes");
+		return ResponseEntity.ok("Hello java");
 	}
 	@GetMapping("/newChanges1")
 	public ResponseEntity<String> getNewString1() {

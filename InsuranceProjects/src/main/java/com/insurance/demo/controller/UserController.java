@@ -71,11 +71,11 @@ public class UserController {
 		return ResponseEntity.ok().body(user1);
 	}
 
-	@GetMapping("/getData")
-	public ResponseEntity<String> getString() {
-
-		return ResponseEntity.ok("Hello java");
-	}
+//	@GetMapping("/getData")
+//	public ResponseEntity<String> getString() {
+//
+//		return ResponseEntity.ok("Hello java");
+//	}
 
 
 	@GetMapping("/newChanges")

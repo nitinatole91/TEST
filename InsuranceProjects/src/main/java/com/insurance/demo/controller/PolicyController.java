@@ -13,7 +13,7 @@ public class PolicyController {
 
 	@Autowired
 	private PolicyService policyService;
-	@PostMapping("/savePolicy")
+	@PostMapping("/savePolicy") //this is save policy
 	public ResponseEntity<Policy> createPolicy(@RequestBody Policy policy){
 		Policy savePolicy = policyService.savePolicy(policy);
 		return ResponseEntity.ok().body(savePolicy);

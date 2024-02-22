@@ -71,19 +71,7 @@ public class UserController {
 		return ResponseEntity.ok().body(user1);
 	}
 
-	@GetMapping("/getData")
-	public ResponseEntity<String> getString() {
-
-		return ResponseEntity.ok("Hello java");
-	}
-	@GetMapping("/getData")
-	public ResponseEntity<String> get() {
-
-		return ResponseEntity.ok("Hello java");
-	}
-	@GetMapping("/newChanges1")
-	public ResponseEntity<String> getNewString1() {
-
-		return ResponseEntity.ok("This is the new file changes");
-	}
+	
+	
+	
 }

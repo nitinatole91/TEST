@@ -9,6 +9,13 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Size;
 
 @Entity
 @Table(name="userData")
@@ -18,15 +25,27 @@ public class User {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "id")
 	private int id ;
-	
+	@NotEmpty
+	@Pattern(regexp ="[^0-9]*",message = "you enter number in in name!..")
 	@Column(name="firstname")
 	private String firstName;
+	@NotEmpty
 	@Column(name = "lastname")
 	private String lastName;
+	@NotEmpty
+	@Email(message = "Email is not valid !!")
 	@Column(name = "useremail")
 	private String userEmail;
+	
+	
+	@NotEmpty
+	@Size(min = 4,message = "the UserName is not valid grow the size !")
 	@Column(name = "username")
 	private String userName;
+	
+	
+	@NotNull
+	@Max(value=99 , message = "the Age is not valid, the enter size two degit !")
 	@Column(name = "userage")
 	private Integer userAge;
 	@Column(name = "gender")
